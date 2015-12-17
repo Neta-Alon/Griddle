@@ -1166,7 +1166,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 
 	            var meta = that.props.columnSettings.getColumnMetadataByName(col);
-	            var columnIsSortable = that.props.columnSettings.getMetadataColumnProperty(col, "sortable", true);
+	            var columnIsSortable = that.props.columnSettings.getMetadataColumnProperty(col, "sortable", true) && that.props.enableSort;
 	            var displayName = that.props.columnSettings.getMetadataColumnProperty(col, "displayName", col);
 
 	            columnSort = meta == null ? columnSort : (columnSort && columnSort + " " || columnSort) + that.props.columnSettings.getMetadataColumnProperty(col, "cssClassName", "");
